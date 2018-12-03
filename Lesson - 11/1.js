@@ -1,5 +1,5 @@
 function solution(A) {
-    let result = [];
+    let result = Array.from({ length: A.length }, (v, i) => 0);
     let aSize = A.length;
     let occurenceMapping = new Map();
     
@@ -28,7 +28,7 @@ function solution(A) {
                 }
             }
         }
-        result.push(aSize - totalDivisors);
+        result[i] = aSize - totalDivisors;
     }
     return result;
 }
